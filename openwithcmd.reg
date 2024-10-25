@@ -1,0 +1,34 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCMD]
+@="Open with CMD"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCMD\command]
+@="cmd.exe /k \"cd /d %1\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD]
+@="Open with CMD"
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD\command]
+@="cmd.exe /k \"cd /d %V\""
+
+
+; Right-click on Folder - Open Command Window Here as Admin
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Open CMD as Admin"
+"HasLUAShield"=""
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="wscript.exe \"C:\\Windows\\cmdasadmin.vbs\" \"%1\""
+
+; Right-click on Background - Open Command Window Here as Admin
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
+@="Open CMD as Admin"
+"HasLUAShield"=""
+"Icon"="cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\runas\command]
+@="wscript.exe \"C:\\Windows\\cmdasadmin.vbs\" \"%V\""
